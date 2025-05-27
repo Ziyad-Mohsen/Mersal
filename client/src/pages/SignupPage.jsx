@@ -1,6 +1,6 @@
 import { ArrowRight, Camera } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import LanguageToggle from "../components/languageToggle";
+import LanguageToggle from "../components/LanguageToggle";
 import ThemeToggle from "../components/ThemeToggle";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";

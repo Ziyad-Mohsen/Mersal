@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link, Navigate } from "react-router-dom";
 import ThemeToggle from "../components/ThemeToggle";
-import LanguageToggle from "../components/languageToggle";
+import LanguageToggle from "../components/LanguageToggle";
 import { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
 

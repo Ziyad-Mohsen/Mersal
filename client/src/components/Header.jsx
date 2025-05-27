@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import LanguageToggle from "./languageToggle";
+import LanguageToggle from "./LanguageToggle";
 import ThemeToggle from "./ThemeToggle";
 import { useAuthStore } from "../store/useAuthStore";
 import { LogOut, Radio, Settings, User } from "lucide-react";
