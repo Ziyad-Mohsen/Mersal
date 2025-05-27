@@ -1,0 +1,13 @@
+{
+  "name": "fullstack-chat-app",
+  "version": "1.0.0",
+  "description": "- User auth [x]\r - User profile [x]\r   - Edit profile [x]\r   - change profile picture [x]\r - Posts [x]\r   - Create ( text only or Add photo ) [x]\r   - Edit [x]\r   - Delete [x]\r - Other users [x]\r   - Add Friend [x]",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
+    "start": "npm run start --prefix server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
