@@ -18,7 +18,7 @@ const app = express();
 // Middlewares
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://mersal-five.vercel.app/"],
+    origin: ["http://localhost:5173", "https://mersal-five.vercel.app"],
     credentials: true,
   })
 );
