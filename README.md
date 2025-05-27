@@ -1,6 +1,6 @@
 # 🌍 Mersal - MERN Social Media Platform
 
-**Mersal - مرسال** is a modern full-stack social media web application built with the MERN stack (MongoDB, Express.js, React.js, Node.js). It allows users to connect, share posts, edit profiles, and switch between multiple languages including Arabic and English.
+**Mersal - مرسال** is a modern full-stack social media web application built with the MERN stack (MongoDB, Express.js, React.js, Node.js). It allows users to connect, share posts, edit profiles, and switch between multiple languages including Arabic and English. [Visit Mersal](https://mersal-five.vercel.app/)
 
 ---
 
