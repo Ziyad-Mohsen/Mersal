@@ -4,10 +4,16 @@ import { useTranslation } from "react-i18next";
 function LanguageToggle() {
   const { i18n } = useTranslation();
 
+  const titles = {
+    en: "Mersal",
+    ar: "مرسال",
+  };
+
   useEffect(() => {
     const dir = i18n.language === "ar" ? "rtl" : "ltr";
     document.documentElement.setAttribute("dir", dir);
     document.documentElement.setAttribute("lang", i18n.language);
+    document.title = titles[i18n.language] || titles.en;
   }, [i18n.language]);
 
   const handleLanguageChange = () => {
