@@ -2,7 +2,6 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import path from "path";
 
 // Database connection function
 import { connectDB } from "./lib/db.js";
@@ -19,7 +18,7 @@ const app = express();
 // Middlewares
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173", "https://your-production-url.com"],
     credentials: true,
   })
 );
@@ -33,14 +32,6 @@ app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 
 const PORT = process.env.PORT || 5000;
-const __dirname = path.resolve();
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../client/dist")));
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client", "dist", "index.html"));
-  });
-}
 
 app.listen(PORT, () => {
   console.log("server is running on PORT:" + PORT);
