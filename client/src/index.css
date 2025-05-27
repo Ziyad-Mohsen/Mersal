@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #54c392;
+  --color-primary-dark: #296d4f;
+  --color-primary-light: #a4e1c6;
+  --color-secondary: #e3e8e6;
+  --color-secondary-dark: #d6dcd9;
+  --color-secondary-light: #f1f1f1;
+  --color-text: #0e100f;
+  --color-text-dark: #050505;
+  --color-text-light: #151917;
+}
+
+@layer base {
+  .dark {
+    --color-secondary: #0e100f;
+    --color-secondary-dark: #050505;
+    --color-secondary-light: #151917;
+    --color-text: #e3e8e6;
+    --color-text-dark: #bdc7c2;
+    --color-text-light: #f1f1f1;
+  }
+}
+
+@utility container {
+  padding-inline: 10px;
+  margin-inline: auto;
+
+  @variant sm {
+    padding-inline: 20px;
+  }
+
+  @variant lg {
+    padding-inline: 42px;
+  }
+
+  @variant xl {
+    padding-inline: 64px;
+  }
+}
+
+@layer base {
+  :root {
+    color: var(--color-text);
+  }
+
+  html {
+    scroll-padding-top: 220px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Tajawal", sans-serif;
+    font-style: normal;
+    background-color: var(--color-secondary-dark);
+  }
+
+  .btn {
+    @apply py-2 px-4 rounded-lg font-semibold cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply border-2 border-transparent bg-primary text-secondary-light hover:bg-primary-dark transition-colors;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-primary text-text hover:bg-primary hover:text-secondary-light transition-colors;
+  }
+
+  .animate-fill {
+    animation: fill 4s linear forwards;
+  }
+
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+}
+
+@keyframes fill {
+  0% {
+    width: 0;
+  }
+  10% {
+    width: 80%;
+  }
+  100% {
+    width: 100%;
+  }
+}
